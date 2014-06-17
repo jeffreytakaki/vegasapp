@@ -1,0 +1,32 @@
+<div x-ng-app= "vegas-app">
+	<div x-ng-controller= "VegasCtrl">
+	
+
+<h3>New User:</h3>
+<form ng-submit="saveUser();">
+  <label for="Name">Name:</label>
+  <input ng-model="newUser.name">
+  <label for="guest">Guest:</label>
+  <input ng-model="newUser.guest" name="guest">
+  <label for="mgm">MGM?:</label>
+  <input ng-model="newUser.mgm" name="mgm" type="checkbox">
+  <label for="sat">Saturday?:</label>
+  <input ng-model="newUser.sat" name="sat" type="checkbox">
+  <label for="sun">Sunday?:</label>
+  <input ng-model="newUser.sun" name="sun" type="checkbox">
+  <label for="mon">Monday?:</label>
+  <input ng-model="newUser.mon" name="mon" type="checkbox">
+  <input type="submit" value="Let's go to Vegas!!" class="btn btn-primary">
+</form>
+
+
+<div ng-repeat = "u in users">
+	{{u.name}}
+	{{u.guest}}
+</div>
+
+
+
+
+	</div>
+</div>
