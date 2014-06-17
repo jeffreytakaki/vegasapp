@@ -1,32 +1,94 @@
 <div x-ng-app= "vegas-app">
 	<div x-ng-controller= "VegasCtrl">
-	
+		
 
-<h3>New User:</h3>
-<form ng-submit="saveUser();">
-  <label for="Name">Name:</label>
-  <input ng-model="newUser.name">
-  <label for="guest">Guest:</label>
-  <input ng-model="newUser.guest" name="guest">
-  <label for="mgm">MGM?:</label>
-  <input ng-model="newUser.mgm" name="mgm" type="checkbox">
-  <label for="sat">Saturday?:</label>
-  <input ng-model="newUser.sat" name="sat" type="checkbox">
-  <label for="sun">Sunday?:</label>
-  <input ng-model="newUser.sun" name="sun" type="checkbox">
-  <label for="mon">Monday?:</label>
-  <input ng-model="newUser.mon" name="mon" type="checkbox">
-  <input type="submit" value="Let's go to Vegas!!" class="btn btn-primary">
-</form>
+		<div id = "vegasDetails">
+			<h1>Vegas, baby, Vegas...</h1>
+			<br>
+			<h3>#WorkHardPlayHard</h3>
+			<p>Wow now brown cow! Has it been 12 weeks already? Is it also sad that I'm going to miss everyone single person I have grown so close to in the past 12 weeks? Is 12 weeks even long enough to forge a lifelong relationship? fuck yeah it is.</p>
 
+			<p>Let us celebrate our victories Saturday June 28 through Monday June 30 in Las Vegas. I have already booked the MGM and the details are below. If you plan on staying at the MGM with more than one guest, please let me know. If a lot of people decide to come, I can look into booking an additional room</p>
+			<p>MGM Signature, 1 bedroom suite 975sq/ft -- $425</p>
 
-<div ng-repeat = "u in users">
-	{{u.name}}
-	{{u.guest}}
+		</div>
+
+<div id = "spacer" >
 </div>
+
+<div id = "newUser">
+	<h2>Sign up here!</h2>
+	<form ng-submit="saveUser();">
+	  <label for="Name">Name:</label>
+	  <input ng-model="newUser.name" class="inputbox" placeholder="First, Last Name">
+	  <label for="guest">Guest:</label>
+	  <input ng-model="newUser.guest" class="inputbox" placeholder="First, Last Name">
+	  <label for="mgm">MGM?:
+	  <input ng-model="newUser.mgm" type="checkbox"></label>
+	  <label for="sat">Saturday?:
+	  <input ng-model="newUser.sat" name="sat" type="checkbox"></label>
+	  <label for="sun">Sunday?:
+	  <input ng-model="newUser.sun" name="sun" type="checkbox"></label>
+	  <label for="mon">Monday?:
+	  <input ng-model="newUser.mon" name="mon" type="checkbox"></label>
+	  
+	  <label for="transportation">
+	   
+	  		<select ng-model="newUser.Transportation">
+			  <option>Car</option>
+			  <option>Flight</option>
+			</select>
+		</label>
+	  
+	  <br>
+	  <input type="submit" value="Let's go to Vegas!!" class="btn btn-primary">
+	</form>
+</div>
+
+<div id = "spacer" >
+</div>
+
+	<table class='row'>	
+	  <thead>
+	    <tr>
+	      <th width=30%>Name</th>
+	      <th width=30%>Guest Name</th>
+	      <th width=10%>Staying at MGM?</th>
+	      <th width=10%>Sat?</th>
+	      <th width=10%>Sun?</th>
+	      <th width=10%>Mon?</th>
+	      <th width=10%>Transportation?</th>
+	    </tr>
+	  </thead>
+	  <tbody>  	
+	    <tr ng-repeat = "u in users">	
+	      <td>{{u.name}}</td>
+	      <td>{{u.guest}}</td>
+	      <td ng-show="u.mgm">YES</td>
+	      <td ng-show="!u.mgm"> </td>
+	      <td ng-show="u.sat">YES</td>
+	      <td ng-show="!u.sat"> </td>
+	      <td ng-show="u.sun">YES</td>
+	      <td ng-show="!u.sun"> </td>
+	      <td ng-show="u.mon">YES</td>
+	      <td ng-show="!u.mon"> </td>
+	      <td>{{u.Transportation}}</td>		
+	    </tr>	 	      
+	  </tbody>	  
+	</table>
+
 
 
 
 
 	</div>
 </div>
+
+<input type="checkbox" ng-model="selected"><br/>
+<select>
+  <option>Hello!</option>
+  <option id="greet">Greetings!</option>
+</select>
+
+
+

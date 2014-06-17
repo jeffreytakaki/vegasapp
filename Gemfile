@@ -41,3 +41,7 @@ end
 
 gem 'active_model_serializers'
 gem 'angularjs-rails'
+
+gem 'foundation-rails'
+
+gem 'rails_12factor'

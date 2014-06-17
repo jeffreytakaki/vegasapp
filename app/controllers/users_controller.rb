@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    respond_with @users 
+    respond_with @users  
   end
 
   def show
@@ -61,6 +61,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :guest, :mgm, :sat, :sun, :mon)
+    params.require(:user).permit(:name, :guest, :mgm, :sat, :sun, :mon, :Transportation)
   end
 end
+

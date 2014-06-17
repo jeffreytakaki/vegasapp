@@ -1,3 +1,53 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	max-width: 100%;
+	margin: 0 auto; 
+	text-align: center;
+	background-image: url("image10.jpg");
+	background-size: cover;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: black;
+}
+
+h3 {
+	color: white;
+}
+
+.inputbox {
+	height: 30px;
+	width: 200px;
+}
+
+input.placeholder {
+	text-align: center;
+}
+
+#vegasDetails {
+	width: 40%;
+	height: 25%;
+	margin: 0 auto;
+	color: white;
+}
+
+table {
+	width: 100%;
+}
+
+#newUser {
+	width:40%;
+	background-color: rgba(255,255,255,0.9);
+	margin: 0 auto;
+	color: black;
+}
+
+#spacer {
+	height: 100px;
+}

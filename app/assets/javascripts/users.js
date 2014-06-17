@@ -26,7 +26,6 @@ vegasApp.controller('VegasCtrl', ['$scope','User', function($scope, User) {
 
   $scope.saveUser = function () {
   	console.log($scope.newUser.name)
-  	$scope.newUser.$save()
       $scope.newUser.$save(function(user) {
         $scope.users.push(user)
         $scope.newUser = new User();
